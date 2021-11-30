@@ -27,9 +27,11 @@ def service_page(request):
 
 def bath_page(request,pk):
     if request.session.has_key('name'):
+        
         single = Registration.objects.get(Name = request.session['name'])
         pro = get_object_or_404(Service, pk=pk)
         return render(request, 'HOME/bathroom.html', {'p': pro, 'sing' : single })
+
     else:
         pro = get_object_or_404(Service, pk=pk)
         return render(request, 'HOME/bathroom.html', {'p': pro})
