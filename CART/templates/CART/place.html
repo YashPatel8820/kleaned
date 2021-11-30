@@ -1,0 +1,103 @@
+{% extends 'CART/base.html' %}
+{% load static %}
+{% block meta_description %}Responsive Bootstrap4 Shop Template, Created by Imran Hossain from https://imransdesign.com/{% endblock %}
+{% block title %} Place-order {% endblock %}
+
+{% block content %}	
+	<!-- breadcrumb-section -->
+	<div class="breadcrumb-section breadcrumb-bg">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 offset-lg-2 text-center">
+					<div class="breadcrumb-text">
+						<!-- <p>Fresh and Organic</p> -->
+						<h1>Place-Order</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end breadcrumb section -->
+
+	<!-- cart -->
+	<div class="cart-section mt-150 mb-150">
+		<div class="container">
+			<div class="row">
+
+				<div class="col-lg-4" style="position: relative; left: 380px;">
+					<div class="total-section">
+						<table class="total-table">
+							<thead class="total-table-head">
+								<tr class="table-total-row">
+									<th></th>
+									<th></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="total-data">
+									<td><strong>Order-Id: </strong></td>
+									<td> {{ order }} </td>
+								</tr>
+                                {% for i in nams %}
+								<tr class="total-data">
+									<td><strong>Name:</strong></td>
+									<td> {{ i.Name }} </td>
+								</tr>
+								<tr class="total-data">
+									<td><strong>Email-Id:</strong></td>
+									<td> {{ i.Email }} </td>
+								</tr>
+                                {% endfor %}
+								<tr class="total-data">
+									<td><strong>No of services:</strong></td>
+									<td> {{ num }}</td>
+								</tr>
+								<tr class="total-data">
+									<td><strong>Total:</strong></td>
+									<td> {{ final }} </td>
+								</tr>
+							</tbody>
+						</table>
+						<div class="cart-buttons">
+							
+						</div>
+					</div>
+
+				
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end cart -->
+
+	<!-- logo carousel -->
+	<div class="logo-carousel-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="logo-carousel-inner">
+						<div class="single-logo-item">
+							<img src=" {% static 'assets/img/company-logos/1.png' %} " alt="">
+						</div>
+						<div class="single-logo-item">
+							<img src=" {% static 'assets/img/company-logos/2.png' %} " alt="">
+						</div>
+						<div class="single-logo-item">
+							<img src=" {% static 'assets/img/company-logos/3.png' %} " alt="">
+						</div>
+						<div class="single-logo-item">
+							<img src=" {% static 'assets/img/company-logos/4.png' %} " alt="">
+						</div>
+						<div class="single-logo-item">
+							<img src=" {% static 'assets/img/company-logos/5.png' %} " alt="">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end logo carousel -->
+
+{% endblock %}
+
+	

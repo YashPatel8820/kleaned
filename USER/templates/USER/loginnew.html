@@ -1,0 +1,71 @@
+{% extends 'USER/base.html' %}
+{% load static %}
+{% block meta_description %}Responsive Bootstrap4 Shop Template, Created by Imran Hossain from https://imransdesign.com/{% endblock %}
+{% block title %} Login Page {% endblock %}
+{% block content %}
+
+    <!-- breadcrumb-section -->
+	<div class="breadcrumb-section breadcrumb-bg">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 offset-lg-2 text-center">
+					<div class="breadcrumb-text">
+						<!-- <p>See more Details</p> -->
+						<h1>Login Here</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end breadcrumb section -->
+
+
+<h2 style="position: relative; left: 500px;"> {{ warning1 }}</h2>
+<h2 style="position: relative; left: 500px;"> {{ warning2 }}</h2>
+<h2 style="position: relative; left: 680px;"> {{ log }}</h2>
+
+	<!--================Login Box Area =================-->
+    <section class="login_box_area section_gap">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6">
+					<div class="login_box_img">
+						<img class="img-fluid" src=" {% static 'img/loginpage3.jpg' %} " alt="">
+						<div class="hover">
+							<h4>New to <span style="color: #F28123;"> Klean </span>?</h4>
+							<p>We provide Kleaning services at your doorstep using hygenic products</p>
+							<a class="primary-btn" href=" {%  url 'Register' %} " style="background-color:#F28123 ;" >Create an Account</a>
+							<!-- <input type="submit" value="Register here" class="primary-btn" style="background-color:#F28123 ;"  > -->
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="login_form_inner">
+						<h3>Log in to enter</h3>
+						<form class="row login_form"  method="POST" id="contactForm" novalidate="novalidate">
+							{% csrf_token %}
+							<div class="col-md-12 form-group">
+								<input type="text" class="form-control" id="name" name="name" placeholder="Username" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Username'">
+							</div>
+							<div class="col-md-12 form-group">
+								<input type="text" class="form-control" id="name" name="password" placeholder="Password" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Password'">
+							</div>
+							<div class="col-md-12 form-group">
+								<div class="creat_account">
+									<!-- <input type="checkbox" id="f-option2" name="selector">
+									<label for="f-option2">Keep me logged in</label> -->
+								</div>
+							</div>
+							<div class="col-md-12 form-group" >
+								<button type="submit" value="submit" name="login" class="primary-btn" style="background-color:  #F28123;"  >Log In</button>
+								<a href="#">Forgot Password?</a>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--================End Login Box Area =================-->
+
+{% endblock %}
