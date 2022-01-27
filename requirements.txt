@@ -1,6 +1,8 @@
 asgiref==3.5.0
+certifi==2021.10.8
 cffi==1.15.0
 chardet==4.0.0
+charset-normalizer==2.0.10
 colorama==0.4.4
 cryptography==36.0.1
 Django==4.0.1
@@ -8,7 +10,10 @@ django-cors-headers==3.11.0
 django-crispy-forms==1.14.0
 django-filter==21.1
 djangorestframework==3.13.1
+gunicorn==20.1.0
+heroku==0.1.4
 humanfriendly==10.0
+idna==3.3
 lxml==4.7.1
 numpy==1.22.1
 packaging==21.3
@@ -18,7 +23,9 @@ Pillow==9.0.0
 pycparser==2.21
 pyparsing==3.0.7
 pyreadline3==3.4.1
+python-dateutil==1.5
 pytz==2021.3
+requests==2.27.1
 sqlparse==0.4.2
 tqdm==4.62.3
 tzdata==2021.5
