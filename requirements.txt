@@ -30,4 +30,5 @@ sqlparse==0.4.2
 tqdm==4.62.3
 tzdata==2021.5
 urllib3==1.26.8
+whitenoise==5.3.0
 word2number==1.1
